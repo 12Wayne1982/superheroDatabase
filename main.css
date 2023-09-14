@@ -1,0 +1,328 @@
+#wrapper{
+    margin: 0 auto;
+    margin-top:2%;
+    border-radius: 15px;
+  
+    background-image: url(pics/superheroesWP.jpg);
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+  
+    height: 800px;
+    width: 1500px;
+  
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color: blue; */
+  }
+
+  a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  #inputWrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "inputContainer inputContainer asideContainer";
+  }
+
+  #outputWrapper{
+    display: grid;
+    /* background-color: aliceblue; */
+  }
+
+  #mainTitle{
+    margin-top: 150px;
+    /* background-color:#99d4a0; */
+    font-size: 56px;
+    color: #000000;
+    font-weight:400;
+  }
+
+  #outputMainTitle{
+    text-align: center;
+  }
+
+/* ***************************** */
+/* ****** addNewHero.php ******* */
+/* ***************************** */
+
+  #outputContainer{
+    margin-top: 60px;
+    text-align: center;
+    /* background-color: #2EE59D; */
+
+    display: grid;
+    align-items: start;
+    justify-content: center;
+  }
+
+  #inputMainTitle{
+    text-align: right;
+  }
+
+  #inputContainer{
+    grid-area: inputContainer;
+    /* background-color: #f01153; */
+  }
+
+  #asideContainer{
+    grid-area: asideContainer;
+    /* background-color: #a6fcff; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+    /* Speechbuble */
+
+      #speechbox{
+        margin-top: 250px;
+        display: none;
+      }
+
+      blockquote.speechbuble{
+        /* background */
+            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/speech-bubble.svg);
+            width: 400px;
+          
+            padding-top: 40px;
+            padding-bottom: 260px; 
+        
+            background-position: center;
+            background-repeat: no-repeat !important;
+            background-size: 100% 100%;
+            margin: 0 auto;
+            text-align: center;
+            height: 0;
+            box-sizing: content-box;
+        
+        /* font */
+            font-family: SequentialistBB, cursive; 
+            font-size: 35px; 
+            line-height: 1;      
+        }
+
+  #formContainer{
+    margin-top: 60px;
+    /* background-color: burlywood;  */
+
+    display: grid;
+    align-items: start;
+    justify-content: end;
+  }
+
+  #formTable{
+    text-align: right;
+    font-size: 30px;
+    font-weight:500;
+    /* background-color: beige; */
+  }
+
+  /* #buttonTable{
+    background-color: beige;
+  } */
+
+  .td-spacer{
+    width: 10px;
+  }
+
+  .tr-spacer{
+    height: 15px;
+  }
+
+  input{
+    width: 350px;
+    height: 40px;
+     
+    border: none; 
+        /* By setting it to border:none the default css of the text field will be gone and your ready to style it for yourself. */
+    outline: none;  
+        /* border used to show that the element is focused gone */
+    border-radius: 5px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    
+    font-size: 30px; 
+    font-weight:500;
+    font-family: 'Comic Sans MS', cursive;
+    padding-left: 10px;
+  }
+
+  input[type=text]:focus{
+    background-color: #f2e9f5;
+    /* border: 3px dotted #595959; */
+  }
+
+  input[type=submit]{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    height: 50px;
+  
+    cursor: pointer;
+  
+    border: none; 
+    /* box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); */
+  }
+
+  .add-new-hero-input:hover{
+    background-color: #2EE59D;
+    color: #ffff;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  }
+
+  .search-for-hero-input:hover{
+    background-color: #a35ff5;
+    color: #ffff;
+    box-shadow: 0px 15px 20px #caa2fa;
+  }
+
+  .back-to-menu-input:hover{
+    background-color: #86dceb;
+    color: #ffff;
+    box-shadow: 0px 15px 20px  #99cbd4;
+  }
+
+  .display-my-heroes-input:hover{
+    background-color: #3169eb;
+    color: #ffff;
+    box-shadow: 0px 15px 20px #7da1f5;
+  }
+
+/* ****************************** */
+/* **** displayAddedHero.php **** */
+/* ****************************** */
+
+  #successfulTable{
+    font-size: 30px;
+    border-collapse: collapse;
+  }
+
+  /* #successfulTable, th, td{
+    border: 1px solid;
+  } */
+
+  .successfulTable-td-Left{
+    text-align: right;
+    width: 500px;
+  }
+
+  .successfulTable-td-right{
+    width: 500px;
+  }
+
+  .successfulTable-td-spacer-1{
+    width: 15px;
+    border-right: 3px solid;
+  }
+
+  .successfulTable-td-spacer-2{
+    width: 15px;
+  }
+
+  .successfulTable-colspan{
+    text-align: center;
+  }
+
+/* ****************************** */
+/* **** displayAllHeroes.php **** */
+/* ****************************** */
+
+#displayAllHeroesTable{
+  text-align: center;
+  font-size: 18px;
+  /* background-color: antiquewhite; */
+
+  /* Für overflow muss die Breite der Tabelle fixiert sein. */
+    width: 1420px; /* 7 Spalten * 200px + 20px Scrollbalken */
+
+  /* Damit entstehen Abstände zwischen den table rows. */
+    border-collapse: separate;
+    border-spacing: 0 15px;
+
+    margin-bottom: 10px;
+}
+
+/* Wichtig für Overflow bei tbody */
+  #displayAllHeroesTable-tbody,
+  .displayAllHeroesTable-thead-tr{
+    display: block;
+  }
+
+#displayAllHeroesTable-tbody{
+  /* background-color:#99cbd4; */
+  /* Overflow (der Scrollbalken) kann nur eingesetzt werden, wenn die tbody eine feste Höhe bekommt. */
+    height: 280px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* für Overflow brauchen td und th brauchen eine feste Größe */
+  .displayAllHeroesTable-th,
+  .displayAllHeroesTable-td {
+      width: 200px; /* 5 Spalten * 200 px = 1000 px */
+  }
+
+/* Die letzte Spalte braucht 20px extra wegen der scrollbar */
+.displayAllHeroesTable-th:last-child {
+  width: 220px; /* 200px + 20px scrollbar width */
+}
+
+.inputDisplayAllHeroesTable{
+  height: 30px;
+  width: 150px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.displayAllHeroesTable-th{
+  /* background-color: blue; */
+  vertical-align:top;
+  font-size: 23px;
+}
+
+.displayAllHeroesTable-td{
+  padding: 10px;
+  vertical-align:top;
+  color: white;
+  background-color: #000000;
+  /* border-top-left-radius: 5px; */
+}
+
+.displayAllHeroesTable-tr .displayAllHeroesTable-td:first-child{
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.displayAllHeroesTable-tr .displayAllHeroesTable-td:last-child{
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+
+.displayAllHeroesTable-button-edit{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color:#9dd3f5;
+    border: none;
+    margin-right: 15px;
+}
+
+.displayAllHeroesTable-button-edit:hover{
+  background-color: #a6fcff;
+}
+
+.displayAllHeroesTable-button-delete{
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color:#c48b9c;
+  border: none;
+}
+
+.displayAllHeroesTable-button-delete:hover{
+  background-color: #f01153;
+}
